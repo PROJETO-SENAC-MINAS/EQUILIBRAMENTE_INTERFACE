@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>login</title>
+</head>
+<body>
+    <div class="login-usuario">
+        <h1 class="titulo">Bem vindo!</h1>
+        <div class="conteudo-login">
+            <form class="formulario" action="/login" method="POST">
+                <label for="email">Email:</label>
+                <input class="input-email" type="email" id="email" name="email" required>
+
+                <label for="senha">Senha:</label>
+                <input class="input-senha" type="password" id="senha" name="senha" required>
+
+                <div class="dados">
+                    <input class="checkbox" type="checkbox">lembrar
+                    <a class="esqueci-senha" href="">esqueci a senha</a>
+                </div>
+
+                <button class="entrar" type="submit">Entrar</button>
+            </form>
+            <p class="registre-se">Não tem uma conta? <a href="/register">Registre-se aqui</a></p>
+        </div>
+    </div>
+</body>
+</html>
