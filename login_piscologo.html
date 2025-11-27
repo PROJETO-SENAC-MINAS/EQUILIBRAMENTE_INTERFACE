@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/login.css">
+    <title>login piscologo</title>
+</head>
+<body>
+    <div class="login-psicologo">
+        <div class="centralizar-imagem">
+            <div class="paciente">
+                <img src="/img/piscologo_imagem.png" alt="psicologo" class="psicologo">
+            </div>
+        </div>
+    <h1 class="titulo">Acesso do Psicólogo</h1>
+
+
+
+    <div class="conteudo-login">
+        <form class="formulario" action="/login_psicologo" method="POST">
+
+            <label for="email">Email profissional:</label>
+            <input class="input" type="email" id="email" name="email" required>
+
+            <label for="crp">Número do CRP:</label>
+            <input class="input" type="text" id="crp" name="crp" placeholder="Ex.: 04/12345" required>
+
+            <label for="senha">Senha:</label>
+            <input class="input" type="password" id="senha" name="senha" required>
+
+            <div class="dados">
+                <label class="lembrar">
+                    <input type="checkbox" name="lembrar"> Lembrar
+                </label>
+                <a class="esqueci-senha" href="/recuperar-senha">Esqueci a senha</a>
+            </div>
+
+            <button type="submit" class="entrar">Entrar</button>
+        </form>
+
+        <p class="registre-se">
+            Não tem uma conta?
+            <a href="/register_psicologo">Cadastre-se como psicólogo</a>
+        </p>
+    </div>
+        <div class="acesso">
+        <a class="acesso-usuario" href="/index.html">Acesso Paciente</a>
+    </div>
+</div>
+
+</body>
+</html>

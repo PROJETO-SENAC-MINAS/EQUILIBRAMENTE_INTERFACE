@@ -10,14 +10,20 @@
 </head>
 <body>
     <div class="login-usuario">
-        <h1 class="titulo">Bem vindo!</h1>
+        <div class="centralizar-imagem">
+            <div class="paciente">
+                <img src="/img/aluna_imagem.png" alt="paciente" class="paciente">
+            </div>
+        </div>
+        <h1 class="titulo">Acesso do Paciente</h1>
+
         <div class="conteudo-login">
             <form class="formulario" action="/login" method="POST">
                 <label for="email">Email:</label>
-                <input class="input-email" type="email" id="email" name="email" required>
+                <input class="input" type="email" id="email" name="email" required>
 
                 <label for="senha">Senha:</label>
-                <input class="input-senha" type="password" id="senha" name="senha" required>
+                <input class="input" type="password" id="senha" name="senha" required>
 
                 <div class="dados">
                     <input class="checkbox" type="checkbox">lembrar
@@ -27,6 +33,9 @@
                 <button class="entrar" type="submit">Entrar</button>
             </form>
             <p class="registre-se">Não tem uma conta? <a href="/register">Registre-se aqui</a></p>
+        </div>
+        <div class="acesso">
+            <a class="acesso-psicologo" href="/login_piscologo.html">Acesso Psicólogo</a>
         </div>
     </div>
 </body>
