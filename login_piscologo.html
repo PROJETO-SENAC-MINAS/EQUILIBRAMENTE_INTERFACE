@@ -18,26 +18,20 @@
 
 
     <div class="conteudo-login">
-        <form class="formulario" action="/login_psicologo" method="POST">
-
-            <label for="email">Email profissional:</label>
-            <input class="input" type="email" id="email" name="email" required>
-
-            <label for="crp">Número do CRP:</label>
-            <input class="input" type="text" id="crp" name="crp" placeholder="Ex.: 04/12345" required>
-
-            <label for="senha">Senha:</label>
-            <input class="input" type="password" id="senha" name="senha" required>
-
-            <div class="dados">
-                <label class="lembrar">
-                    <input type="checkbox" name="lembrar"> Lembrar
-                </label>
-                <a class="esqueci-senha" href="/recuperar-senha">Esqueci a senha</a>
-            </div>
-
+        <form class="formulario" onsubmit="validarPsicologo(event)">
+    
+            <label>Email profissional:</label>
+            <input class="input" id="emailPsicologo" type="email" name="email" required>
+        
+            <label>Número do CRP:</label>
+            <input class="input" id="crpPsicologo" type="text" name="crp" placeholder="Ex.: 04/12345" required>
+        
+            <label>Senha:</label>
+            <input class="input" id="senhaPsicologo" type="password" name="senha" required>
+        
             <button type="submit" class="entrar">Entrar</button>
         </form>
+        
 
         <p class="registre-se">
             Não tem uma conta?
@@ -48,6 +42,6 @@
         <a class="acesso-usuario" href="/index.html">Acesso Paciente</a>
     </div>
 </div>
-
+    <script src="js/login.js"></script>
 </body>
 </html>
