@@ -18,25 +18,28 @@
         <h1 class="titulo">Acesso do Paciente</h1>
 
         <div class="conteudo-login">
-            <form class="formulario" action="/login" method="POST">
+            <form onsubmit="validarPaciente(event)" class="formulario">
                 <label for="email">Email:</label>
-                <input class="input" type="email" id="email" name="email" required>
-
+                <input class="input" type="email" id="emailPaciente" name="email" required>
+            
                 <label for="senha">Senha:</label>
-                <input class="input" type="password" id="senha" name="senha" required>
-
+                <input class="input" type="password" id="senhaPaciente" name="senhaPaciente" required>
+            
                 <div class="dados">
                     <input class="checkbox" type="checkbox">lembrar
                     <a class="esqueci-senha" href="">esqueci a senha</a>
                 </div>
-
-                <button class="entrar" type="submit">Entrar</button>
+            
+                <button  class="entrar" type="submit">
+                    Entrar
+                </button>
             </form>
             <p class="registre-se">Não tem uma conta? <a href="/register">Registre-se aqui</a></p>
         </div>
         <div class="acesso">
-            <a class="acesso-psicologo" href="/login_piscologo.html">Acesso Psicólogo</a>
+            <a class="acesso-psicologo" href="./html/login_piscologo.html">Acesso Psicólogo</a>
         </div>
     </div>
+    <script src="./js/login.js"></script>
 </body>
 </html>
