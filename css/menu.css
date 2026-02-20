@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: white;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #5c9ead;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Conteúdo principal */
+.menu-container {
+    padding: 40px;
+    text-align: center;
+}
+
+.menu-container h2 {
+    margin-bottom: 30px;
+    color: #5c9ead;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Cards */
+.card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #4a7c8a;
+}
+
+/* Rodapé */
+footer {
+    margin-top: 40px;
+    background-color: #eaf3f6;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
