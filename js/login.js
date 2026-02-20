@@ -1,26 +1,25 @@
-function validarPaciente() {
-    const usuario = document.getElementById("emailPaciente").value;
-    const senha = document.getElementById("senhaPaciente").value;
-    
+function validarPaciente(event) {
+    event.preventDefault();
+
+    const usuario = document.getElementById("emailPaciente").value.trim();
+    const senha = document.getElementById("senhaPaciente").value.trim();
 
     const pacienteCorreto = "paciente@gmail.com";
     const senhaCorreta = "1234";
 
     if (usuario === pacienteCorreto && senha === senhaCorreta) {
-        alert("Usuario e senha corretos!");
-        localStorage.setItem("usuarioLogado", pacienteCorreto);
-        // window.location.href = "acesso.html";
+        alert("Login realizado!");
+        window.location.href = "usuarioLogado.html";
     } else {
-        alert("Usuario ou e senha incorreto!");
+        alert("Usuário ou senha incorretos!");
     }
 }
 
-function validarPsicologo(event) {
-    event.preventDefault(); 
+function validarPsicologo() {
 
-    const emailPsicologo = document.getElementById("emailPsicologo").value.trim();
-    const crpPsicologo = document.getElementById("crpPsicologo").value.trim();
-    const senhaPsicologo = document.getElementById("senhaPsicologo").value.trim();
+    const emailPsicologo = document.getElementById("emailPsicologo").value;
+    const crpPsicologo = document.getElementById("crpPsicologo").value;
+    const senhaPsicologo = document.getElementById("senhaPsicologo").value;
 
     const emailCorreto = "psicologo@gmail.com";
     const senhaCorreta = "1234";
