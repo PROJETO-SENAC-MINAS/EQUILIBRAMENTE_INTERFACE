@@ -9,7 +9,7 @@ function validarPaciente(event) {
 
     if (usuario === pacienteCorreto && senha === senhaCorreta) {
         alert("Login realizado!");
-        window.location.href = "usuarioLogado.html";
+        window.location.href = "menu.html";
     } else {
         alert("Usuário ou senha incorretos!");
     }
