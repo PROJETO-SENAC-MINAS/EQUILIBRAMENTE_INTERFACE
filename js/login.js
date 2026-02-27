@@ -9,7 +9,7 @@ function validarPaciente() {
     if (usuario === pacienteCorreto && senha === senhaCorreta) {
         alert("Usuario e senha corretos!");
         localStorage.setItem("usuarioLogado", pacienteCorreto);
-        // window.location.href = "acesso.html";
+        window.location.href = "consultas.html";
     } else {
         alert("Usuario ou e senha incorreto!");
     }
