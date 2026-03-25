@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-primaria: #57CA83;
+    --cor-secundaria: #17B9FF;
+    --cor-terciaria: #1d4ff3;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Inter', sans-serif;
+    background-image: url("/img/background_gradiente_azul.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: var(--cor-secundaria);
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+h1{
+    color: var(--cor-terciaria);
+}
+
+/* Conteúdo principal */
+.menu-container {
+    padding: 40px;
+    text-align: center;
+}
+
+.menu-container h2 {
+    margin-bottom: 30px;
+    color: var(--cor-terciaria);
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Cards */
+.card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: var(--cor-terciaria)
+}
+
+a{
+    text-decoration: none;
+    color: var(--cor-secundaria);
+}
+
+/* Rodapé */
+footer {
+    background-color: #eaf3f6;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}

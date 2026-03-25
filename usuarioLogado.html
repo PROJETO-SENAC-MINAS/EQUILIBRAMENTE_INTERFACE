@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/iniciopaciente.css">
+    <title>Equilibra Mente | Início</title>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+            <h2 class="titulo">Equilibra Mente</h2>
+            
+        </div>
+
+        <div class="usuario">
+            <span>Olá, Paciente 👋</span>
+            <a href="/login.html" class="logout">Sair</a>
+        </div>
+    </header>
+
+    <!-- ÁREA DE BUSCA -->
+    <section class="busca-container">
+        <h1>Encontre um Psicólogo perto de você</h1>
+
+        <div class="filtros">
+
+            <input type="text" 
+                   id="cidade" 
+                   placeholder="Digite sua cidade ou bairro">
+
+            <select id="especialidade">
+                <option value="">Selecione a especialidade</option>
+                <option value="ansiedade">Ansiedade</option>
+                <option value="depressao">Depressão</option>
+                <option value="relacionamento">Relacionamentos</option>
+                <option value="infantil">Psicologia Infantil</option>
+                <option value="carreira">Carreira</option>
+            </select>
+
+            <button onclick="buscarPsicologos()">Buscar</button>
+
+        </div>
+    </section>
+
+    <!-- LISTA DE PSICÓLOGOS -->
+    <section class="resultados" id="listaPsicologos">
+
+        <!-- CARD 1 -->
+        <div class="card-psicologo">
+            <h3>Dra. Ana Souza</h3>
+            <p><strong>Especialidade:</strong> Ansiedade</p>
+            <p><strong>Local:</strong> Belo Horizonte - MG</p>
+            <button>Agendar Consulta</button>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="card-psicologo">
+            <h3>Dr. Carlos Mendes</h3>
+            <p><strong>Especialidade:</strong> Relacionamentos</p>
+            <p><strong>Local:</strong> Contagem - MG</p>
+            <button>Agendar Consulta</button>
+        </div>
+
+    </section>
+
+    <script src="../js/paciente.js"></script>
+</body>
+</html>
