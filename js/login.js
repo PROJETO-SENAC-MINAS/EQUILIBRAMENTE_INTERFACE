@@ -8,14 +8,9 @@ function validarPaciente(event) {
     const senhaCorreta = "1234";
 
     if (usuario === pacienteCorreto && senha === senhaCorreta) {
-<<<<<<< HEAD
         alert("Usuario e senha corretos!");
         localStorage.setItem("usuarioLogado", pacienteCorreto);
         window.location.href = "consultas.html";
-=======
-        alert("Login realizado!");
-        window.location.href = "menu.html";
->>>>>>> dce99dc3a8e8a82172e7c7158e57458a2570c0ad
     } else {
         alert("Usuário ou senha incorretos!");
     }
