@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equilibra Mente | Home</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="app-header">
+        <div class="menu-title">Olá, Paciente 👋</div>
+        <button id="menu-toggle" class="settings-btn">
+            <i class="fas fa-cog"></i>
+        </button>
+    </header>
+
+    <aside id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-title">Menu</div>
+            <button id="close-menu" class="close-btn">&times;</button>
+        </div>
+        <ul class="sidebar-list">
+            <li><a href="#"><i class="fas fa-chevron-right"></i> Menu principal</a></li>
+            <li><a href="#"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+            <li><a href="#"><i class="fas fa-chevron-right"></i> Perfil paciente</a></li>
+            <li><a href="#"><i class="fas fa-chevron-right"></i> Perfil Psicólogos</a></li>
+            <li><a href="#"><i class="fas fa-chevron-right"></i> Atendimento</a></li>
+            <li><a href="#"><i class="fas fa-chevron-right"></i> Marcar Atendimento</a></li>
+            <li><a href="#"><i class="fas fa-chevron-right"></i> Teste Psicológico</a></li>
+            <li><a href="#"><i class="fas fa-chevron-right"></i> Resultados</a></li>
+            <li><a href="#"><i class="fas fa-chevron-right"></i> Calendário</a></li>
+            <li><a href="#"><i class="fas fa-chevron-right"></i> Chat</a></li>
+            <li><a href="#"><i class="fas fa-chevron-right"></i> Avaliação</a></li>
+            <li><a href="#"><i class="fas fa-chevron-right"></i> Trocar de conta</a></li>
+            <li><a href="#" class="logout-link"><i class="fas fa-chevron-right"></i> Sair</a></li>
+        </ul>
+    </aside>
+
+    <main class="main-content">
+        <section class="busca-container">
+            <div class="welcome-section">
+                <h1>Encontre seu Equilíbrio</h1>
+                <p>Seu espaço de cuidado mental e bem-estar.</p>
+            </div>
+
+            <div class="filtros">
+                <input type="text" id="cidade" placeholder="Digite sua cidade ou bairro">
+                <select id="especialidade">
+                    <option value="">Selecione a especialidade</option>
+                    <option value="ansiedade">Ansiedade</option>
+                    <option value="depressao">Depressão</option>
+                    <option value="relacionamento">Relacionamentos</option>
+                    <option value="infantil">Psicologia Infantil</option>
+                    <option value="carreira">Carreira</option>
+                </select>
+                <button class="btn-buscar" onclick="buscarPsicologos()">Buscar</button>
+            </div>
+        </section>
+
+        <section class="resultados" id="listaPsicologos">
+            <div class="card-psicologo">
+                <div class="card-header">
+                    <h3>Dra. Ana Souza</h3>
+                    <span class="badge">Disponível</span>
+                </div>
+                <div class="card-body">
+                    <p><i class="fas fa-brain"></i> <strong>Especialidade:</strong> Ansiedade</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Local:</strong> Belo Horizonte - MG</p>
+                </div>
+                <button class="btn-agendar">Agendar Consulta</button>
+            </div>
+
+            <div class="card-psicologo">
+                <div class="card-header">
+                    <h3>Dr. Carlos Mendes</h3>
+                    <span class="badge">Disponível</span>
+                </div>
+                <div class="card-body">
+                    <p><i class="fas fa-heart"></i> <strong>Especialidade:</strong> Relacionamentos</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Local:</strong> Contagem - MG</p>
+                </div>
+                <button class="btn-agendar">Agendar Consulta</button>
+            </div>
+        </section>
+    </main>
+
+    <div id="overlay" class="overlay"></div>
+    <script src="js/home.js" defer></script>
+</body>
+</html>

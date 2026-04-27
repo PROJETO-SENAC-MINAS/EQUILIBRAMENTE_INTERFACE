@@ -1,0 +1,229 @@
+/* VARIÁVEIS E CORES */
+:root {
+    --azul-claro: #add8e6;
+    --azul-escuro: #1d3557;
+    --branco-transparente: rgba(255, 255, 255, 0.95);
+    --cor-botao: #457b9d;
+    --cor-hover: #1d3557;
+    --sombra: 0 4px 15px rgba(0, 0, 0, 0.08);
+    --radius: 15px;
+}
+
+/* RESET E BACKGROUND GRADIENTE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(180deg, var(--branco-transparente) 0%, var(--azul-claro) 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: var(--azul-escuro);
+    overflow-x: hidden;
+}
+
+/* HEADER PADRONIZADO */
+.app-header {
+    background-color: var(--branco-transparente);
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.menu-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.settings-btn {
+    background: none;
+    border: none;
+    color: var(--azul-escuro);
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.settings-btn:hover {
+    transform: rotate(90deg);
+    color: var(--cor-botao);
+}
+
+/* ÁREA DE BUSCA */
+.busca-container {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.welcome-section h1 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.welcome-section p {
+    font-size: 1rem;
+    opacity: 0.8;
+    margin-bottom: 30px;
+}
+
+.filtros {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.filtros input, .filtros select {
+    padding: 14px;
+    border-radius: var(--radius);
+    border: 1px solid rgba(0,0,0,0.1);
+    width: 260px;
+    outline: none;
+    background: white;
+}
+
+.btn-buscar {
+    padding: 14px 30px;
+    background-color: var(--cor-botao);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-buscar:hover {
+    background-color: var(--cor-hover);
+}
+
+/* CARDS DE PSICÓLOGOS */
+.resultados {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 20px 40px 60px;
+}
+
+.card-psicologo {
+    background: white;
+    border-radius: var(--radius);
+    padding: 25px;
+    box-shadow: var(--sombra);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-psicologo:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.badge {
+    font-size: 0.75rem;
+    background: #e1f5fe;
+    color: #0288d1;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.card-body p {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.card-body i {
+    color: var(--cor-botao);
+    width: 15px;
+}
+
+.btn-agendar {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 2px solid var(--cor-botao);
+    color: var(--cor-botao);
+    border-radius: var(--radius);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-agendar:hover {
+    background: var(--cor-botao);
+    color: white;
+}
+
+/* MENU LATERAL (SIDEBAR) */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 280px;
+    height: 100%;
+    background-color: white;
+    z-index: 1001;
+    transition: left 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 0 15px rgba(0,0,0,0.1);
+}
+
+.sidebar.active { left: 0; }
+
+.sidebar-header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.sidebar-title { font-weight: bold; font-size: 1.2rem; }
+
+.sidebar-list { list-style: none; padding: 20px 0; }
+
+.sidebar-list li a {
+    padding: 15px 25px;
+    color: var(--azul-escuro);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: background 0.2s;
+}
+
+.sidebar-list li a:hover { background-color: #f8fcfd; }
+
+.logout-link { color: #e63946 !important; font-weight: bold; }
+
+.overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 1000;
+    display: none;
+}
+.overlay.active { display: block; }
